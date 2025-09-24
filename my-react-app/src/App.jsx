@@ -118,10 +118,10 @@ const WeatherApp = () => {
           <div className="instructions">
             <h3>🚀 For Workshop Demo:</h3>
             <ol>
-              <li>1. Sign up at openweathermap.org</li>
-              <li>2. Get your free API key</li>
-              <li>3. Replace 'YOUR_API_KEY_HERE' in the code</li>
-              <li>4. Try searching for "Miami" or "New York"!</li>
+              <li>Sign up at openweathermap.org</li>
+              <li>Get your free API key (may take 5-10 minutes to activate)</li>
+              <li>Create a .env file with the variable VITE_WEATHER_API_KEY='paste your api key here'</li>
+              <li>Try searching for "Miami" or "New York"!</li>
             </ol>
           </div>
         )}
