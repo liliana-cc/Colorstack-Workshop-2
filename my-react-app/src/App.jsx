@@ -8,7 +8,7 @@ const WeatherApp = () => {
   const [error, setError] = useState('');
 
   // This is where you'll add your API key during the demo
-  const API_KEY = 'c889fd650a17ad0b265d3385d010cdd0';
+  const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
   const API_URL = 'https://api.openweathermap.org/data/2.5/weather';
 
   const getWeather = async () => {
