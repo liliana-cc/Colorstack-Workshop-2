@@ -1,42 +1,235 @@
 #root {
-  max-width: 1280px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+/* Main app container */
+.app {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  padding: 2rem 5%;  /* 5% padding on sides instead of fixed width */
+  font-family: 'Arial', sans-serif;
+}
+
+/* Center container */
+/* .container {
+  max-width: 800px;
   margin: 0 auto;
-  padding: 2rem;
+  width: 95%;
+  padding: 0 1rem;
+} */
+
+/* Header section */
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.subtitle {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+}
+
+/* Search section */
+.search-section {
+  margin-bottom: 1.5rem;
+}
+
+.input-group {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.search-input {
+  flex: 1;
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  color: #333;
+  outline: none;
+}
+
+.search-input:focus {
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+}
+
+.search-button {
+  padding: 1rem 1.5rem;
+  background: white;
+  color: #4facfe;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.search-button:hover {
+  background: #f0f8ff;
+  transform: translateY(-2px);
+}
+
+.search-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.search-button.loading {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Error message */
+.error-message {
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid #ff6b6b;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.error-message p {
+  color: #d63031;
+  font-weight: bold;
+  margin: 0;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Weather card */
+.weather-card {
+  margin-top: 20px;
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.weather-header {
+  margin-bottom: 1.5rem;
+}
+
+.location {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.description {
+  color: #666;
+  font-size: 1rem;
+  text-transform: capitalize;
+  margin: 0;
+}
+
+/* Main weather display */
+.weather-main {
+  margin-bottom: 2rem;
+}
+
+.weather-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.temperature {
+  font-size: 3rem;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.feels-like {
+  color: #666;
+  font-size: 1rem;
+}
+
+/* Weather details */
+.weather-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.detail-item {
+  background: #f8f9ff;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.detail-label {
+  color: #4facfe;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.detail-value {
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Instructions */
+.instructions {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 1.5rem;
+  color: white;
+  margin-top: 1.5rem;
+}
+
+.instructions h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.instructions ol {
+  padding-left: 1rem;
+}
+
+.instructions li {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.footer {
+  text-align: center;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .app {
+    padding: 1rem;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .title {
+    font-size: 2rem;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  
+  .temperature {
+    font-size: 2.5rem;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  
+  .weather-details {
+    grid-template-columns: 1fr;
+  }
 }
