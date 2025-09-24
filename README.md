@@ -1,3 +1,5 @@
+Welcome to ColorStack UF's Workshop 2!
+
 dependency downloads ~
 
 for both:
