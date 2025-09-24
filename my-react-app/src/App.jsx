@@ -127,7 +127,7 @@ const WeatherApp = () => {
         )}
       </div>
        <div className="footer">
-          <p className="subtitle">ColorStack UF 2025 Workshop 2 - lilina-cc</p>
+          <p className="subtitle">ColorStack UF 2025 Workshop 2 | liliana-cc</p>
         </div>
     </div>
   );
